@@ -3,10 +3,10 @@ import RPi.GPIO as GPIO
 import time
 
 try:
-      GPIO.setmode(GPIO.BCM)
+      GPIO.setmode(GPIO.BOARD)
 
-      PIN_TRIGGER = 5
-      PIN_ECHO = 6
+      PIN_TRIGGER = 29
+      PIN_ECHO = 31
 
       GPIO.setup(PIN_TRIGGER, GPIO.OUT)
       GPIO.setup(PIN_ECHO, GPIO.IN)
@@ -15,7 +15,7 @@ try:
 
       print "Waiting for sensor to settle"
 
-      time.sleep(0.3)
+      time.sleep(2)
 
       print "Calculating distance"
 
